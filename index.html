@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--
+    =========================================================
+    PORTAFOLIO DIGITAL - EDWIN GUEVARA | VR2
+
+    Estructura para GitHub:
+    /index.html
+    /css/styles.css
+    /js/app.js
+    /assets/
+
+    Importante:
+    - index.html debe quedar en la raíz del repositorio.
+    - No cambies el nombre de index.html.
+    - Los fondos, foto, CV y certificados van dentro de /assets.
+    =========================================================
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edwin Guevara | Plan de Desarrollo de Carrera</title>
+  <!-- Estilos principales del portafolio -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">EG</span>
+        <span>Edwin Guevara <small>Plan de Desarrollo de Carrera</small></span>
+      </a>
+      <div class="top-actions">
+        <a class="nav-link" href="#plan">Ver plan</a>
+        <!-- =========================================================
+             BOTÓN PARA GUARDAR COMO PDF
+             Nota importante:
+             - En algunos visores internos, como la vista previa de ChatGPT, window.print() puede no ejecutarse.
+             - Para que funcione correctamente, abre este archivo HTML en Chrome o Microsoft Edge.
+             - Luego haz clic en este botón o presiona Ctrl + P y elige "Guardar como PDF".
+             ========================================================= -->
+        <button class="print-btn" type="button" onclick="printPortfolio()">Guardar como PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Ingeniería de Sistemas e Informática · Portafolio Digital</div>
+        <h1>Plan de Desarrollo de <span>Carrera</span></h1>
+        <p class="lead">
+          Soy <strong>Edwin Guevara</strong>, estudiante de Ingeniería de Sistemas e Informática del 7.° ciclo y Técnico Electrónico Industrial. Mi propuesta profesional se enfoca en crear una empresa dedicada a la fabricación de coberturas de Aluzinc para techos de casas, integrando automatización electrónica y sistemas TI para gestionar de manera eficiente las ventas, la fabricación, el control de inventarios, la trazabilidad de pedidos y la toma de decisiones.
+        </p>
+        <div class="hero-buttons">
+          <a class="button primary" href="#plan">Explorar mi plan profesional →</a>
+          <a class="button secondary" href="#panel-3" onclick="activatePanel('panel-3')">Ver objetivos SMART</a>
+        </div>
+      </div>
+      <div class="hero-board" aria-hidden="true">
+        <div class="window">
+          <div class="window-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <span>Portafolio Profesional | Edwin Guevara</span>
+          </div>
+          <div class="visual-header">
+            <h3>Ruta profesional</h3>
+            <p>De mi formación técnica hacia una empresa de Aluzinc automatizada.</p>
+          </div>
+          <div class="visual-flow">
+            <div class="flow-card"><b>Formación</b><span>Sistemas<br>+ Electrónica</span></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-card"><b>Automatización</b><span>Ventas<br>+ Producción</span></div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-card"><b>Empresa</b><span>Coberturas<br>de Aluzinc</span></div>
+          </div>
+          <div class="executive-card">
+            <h4>Enfoque profesional</h4>
+            <div class="executive-list">
+              <div class="executive-item"><b>Base</b><span>Experiencia técnica, electrónica industrial y formación en Ingeniería de Sistemas.</span></div>
+              <div class="executive-item"><b>Transición</b><span>Automatización, bases de datos, software, análisis de datos y gestión industrial.</span></div>
+              <div class="executive-item"><b>Empresa</b><span>Coberturas de Aluzinc para techos, con ventas y producción automatizadas.</span></div>
+            </div>
+          </div>
+          <div class="status-row">
+            <div class="status"><strong>10</strong><small>Objetivos</small></div>
+            <div class="status"><strong>18M</strong><small>Horizonte</small></div>
+            <div class="status"><strong>TI</strong><small>Especialidad</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary" aria-label="Indicadores principales">
+      <div class="metric"><label>Trayectoria profesional</label><strong>2 años</strong><span>Experiencia aproximada</span></div>
+      <div class="metric"><label>Objetivos definidos</label><strong>10</strong><span>Metas SMART</span></div>
+      <div class="metric"><label>Capacidades analizadas</label><strong>8</strong><span>Actual y meta</span></div>
+      <div class="metric"><label>Meta final</label><strong>Empresa</strong><span>Coberturas de Aluzinc para techos</span></div>
+    </section>
+
+    <section class="workspace" id="plan">
+      <aside class="sidebar">
+        <div class="sidebar-title">
+          <span>Contenido</span>
+          <h2>Plan de Desarrollo de Carrera</h2>
+        </div>
+        <nav aria-label="Secciones del portafolio">
+          <button class="section-btn active" type="button" onclick="activatePanel('panel-1', this)"><span class="num">01</span><span><b>Datos personales y perfil profesional</b><small>Formación, experiencia y visión</small></span></button>
+          <button class="section-btn" type="button" onclick="activatePanel('panel-2', this)"><span class="num">02</span><span><b>Autoconocimiento</b><small>Fortalezas y áreas de mejora</small></span></button>
+          <button class="section-btn" type="button" onclick="activatePanel('panel-3', this)"><span class="num">03</span><span><b>Objetivos SMART</b><small>Diez metas medibles</small></span></button>
+          <button class="section-btn" type="button" onclick="activatePanel('panel-4', this)"><span class="num">04</span><span><b>Redes de contacto y networking</b><small>Estrategias de crecimiento</small></span></button>
+          <button class="section-btn" type="button" onclick="activatePanel('panel-5', this)"><span class="num">05</span><span><b>Autoempleo y crecimiento profesional</b><small>Ruta progresiva</small></span></button>
+          <button class="section-btn" type="button" onclick="activatePanel('panel-6', this)"><span class="num">06</span><span><b>Conclusiones y plan de acción</b><small>Compromisos concretos</small></span></button>
+        </nav>
+        <p class="sidebar-note">Selecciona una sección para visualizar su desarrollo. Los indicadores gráficos corresponden a una autovaloración personal utilizada para orientar mis acciones de mejora.</p>
+      </aside>
+
+      <div class="content">
+        <article class="panel active" id="panel-1">
+          <div class="panel-heading">
+            <div class="panel-number">01</div>
+            <div><h2>Datos personales y perfil profesional</h2><p>Presentación de mi formación, experiencia relevante, intereses y visión profesional.</p></div>
+          </div>
+          <div class="profile-header">
+            <div class="avatar">
+              <!-- =========================================================
+                   ZONA EDITABLE: FOTO DE PERFIL
+                   1. Crea una carpeta llamada "assets" junto a este HTML.
+                   2. Guarda tu foto como: assets/foto-perfil.jpg
+                   3. Para usar tu foto, borra el SVG de abajo y descomenta esta línea:
+
+                   <img src="assets/foto-perfil.jpg" alt="Foto profesional de Edwin Guevara" class="profile-photo">
+
+                   Recomendación:
+                   - Usa una foto cuadrada o vertical, de buena calidad.
+                   - Evita fondos cargados para que se vea profesional.
+                   ========================================================= -->
+              <svg viewBox="0 0 100 100" role="img" aria-label="Perfil profesional">
+                <circle cx="50" cy="31" r="17" fill="#e4f5ff"/>
+                <path d="M21 88c3-22 17-33 29-33s26 11 29 33" fill="#20d4ff" opacity=".85"/>
+                <path d="M31 86c4-13 14-20 19-20s15 7 19 20" fill="#a855f7" opacity=".55"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Edwin Guevara</h3>
+              <p><strong>Ingeniería de Sistemas e Informática · 7.° ciclo</strong><br>Técnico Electrónico Industrial con visión de emprendimiento industrial tecnológico.</p>
+              <div class="chip-wrap">
+                <span class="chip">Ingeniería de Sistemas</span><span class="chip">Electrónica Industrial</span><span class="chip">Automatización</span><span class="chip">Sistemas TI</span><span class="chip">Datos / BI</span><span class="chip">Producción Aluzinc</span>
+              </div>
+            </div>
+          </div>
+          <div class="highlight"><strong>Concepto profesional:</strong> mi propuesta se enfoca en crear una empresa dedicada a la fabricación de coberturas de Aluzinc para techos de casas, integrando automatización electrónica y sistemas TI para controlar ventas, fabricación, inventario, pedidos y reportes. Como estudiante de Ingeniería de Sistemas, mi visión es combinar la manufactura metálica con soluciones digitales para construir una empresa moderna, eficiente y escalable, capaz de ofrecer productos personalizados, tiempos de entrega controlados y una gestión basada en datos.</div>
+
+          <div class="cards three">
+            <div class="box"><span class="tag">Experiencia relevante</span><h3>Sistemas críticos de seguridad</h3><p>Experiencia aproximada de 2 años en instalación, mantenimiento, pruebas y documentación de sistemas DACI, agente limpio y detección temprana VESDA.</p></div>
+            <div class="box"><span class="tag">Intereses profesionales</span><h3>Manufactura digital</h3><p>Automatización industrial, sistemas de información, análisis de datos, control de producción, inventarios, trazabilidad y gestión de calidad.</p></div>
+            <div class="box"><span class="tag">Especialidad a destacar</span><h3>TI aplicada a industria</h3><p>Diseño e integración de sistemas TI para producción, inventario, mantenimiento, ventas, control de calidad digital y trazabilidad por lotes en una planta de coberturas de Aluzinc.</p></div>
+          </div>
+          <div class="highlight"><strong>Visión profesional:</strong> consolidarme como ingeniero de sistemas con enfoque industrial, integrando electrónica, automatización, software y análisis de datos para crear una empresa moderna de fabricación de coberturas de Aluzinc para techos de casas, con ventas y producción gestionadas mediante sistemas TI.</div>
+
+          <!-- =========================================================
+               ZONA EDITABLE: CV Y CERTIFICADOS
+               Coloca tus archivos en una carpeta llamada "assets".
+
+               Ejemplo de estructura:
+               /Portafolio_Digital_Plan_Carrera_Edwin.html
+               /assets/CV_Edwin_Guevara.pdf
+               /assets/certificado_powerbi.pdf
+               /assets/certificado_sql.pdf
+
+               Para cambiar un documento:
+               - Cambia el valor de href="..." en cada tarjeta.
+
+               Para agregar otro certificado:
+               - Copia una tarjeta <a class="document-card"> completa.
+               - Cambia el href, el título y la descripción.
+               ========================================================= -->
+          <div class="documents-section">
+            <h3 class="subheading">Documentos profesionales</h3>
+            <div class="documents-grid">
+              <a class="document-card" href="assets/CV_Edwin_Guevara.pdf" target="_blank" rel="noopener">
+                <div class="document-icon">📄</div>
+                <h3>Currículum Vitae</h3>
+                <p>Reemplaza este enlace por tu CV actualizado en PDF.</p>
+                <span class="document-link">Abrir CV</span>
+              </a>
+
+              <a class="document-card" href="assets/certificado_powerbi.pdf" target="_blank" rel="noopener">
+                <div class="document-icon">🏅</div>
+                <h3>Certificado Power BI</h3>
+                <p>Cambia el archivo por tu certificado real cuando lo tengas listo.</p>
+                <span class="document-link">Ver certificado</span>
+              </a>
+
+              <a class="document-card" href="assets/certificado_sql.pdf" target="_blank" rel="noopener">
+                <div class="document-icon">🗄️</div>
+                <h3>Certificado SQL</h3>
+                <p>Coloca aquí tu certificado de base de datos o curso relacionado.</p>
+                <span class="document-link">Ver certificado</span>
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="panel" id="panel-2">
+          <div class="panel-heading">
+            <div class="panel-number">02</div>
+            <div><h2>Autoconocimiento</h2><p>Reflexión sobre mis fortalezas reales y las capacidades que debo mejorar para avanzar profesionalmente.</p></div>
+          </div>
+          <h3 class="subheading">Fortalezas personales y profesionales</h3>
+          <div class="cards two">
+            <div class="box strength"><h3>Responsabilidad</h3><p>Cumplo mis tareas técnicas con orden y compromiso; esta fortaleza me permite generar confianza y entregar resultados confiables en los proyectos.</p></div>
+            <div class="box strength"><h3>Respeto</h3><p>Mantengo un trato profesional con compañeros, clientes y supervisores; esto favorece el trabajo colaborativo y una comunicación adecuada.</p></div>
+            <div class="box strength"><h3>Resiliencia</h3><p>Me adapto ante fallas, presión y cambios en campo; esta capacidad me ayuda a aprender de los problemas y buscar soluciones oportunas.</p></div>
+            <div class="box strength"><h3>Compromiso</h3><p>Asumo los objetivos del proyecto con seriedad; esto me impulsa a mejorar continuamente y concluir correctamente las actividades asignadas.</p></div>
+          </div>
+          <h3 class="subheading">Áreas de mejora y acción personal</h3>
+          <div class="cards two">
+            <div class="box improve"><h3>Mejorar mi forma de expresarme</h3><p>Practicaré comunicación profesional mediante informes y exposiciones breves para transmitir mis ideas con mayor claridad y seguridad.</p></div>
+            <div class="box improve"><h3>Ser más tolerante</h3><p>Trabajaré en escuchar antes de responder y manejar la frustración para mantener relaciones respetuosas en situaciones de presión.</p></div>
+            <div class="box improve"><h3>Ser más ordenado</h3><p>Implementaré una planificación semanal para organizar actividades académicas, laborales y personales, revisando avances periódicamente.</p></div>
+            <div class="box improve"><h3>Gestionar mi carácter asertivamente</h3><p>Desarrollaré autocontrol y comunicación asertiva para resolver desacuerdos sin afectar el clima laboral ni personal.</p></div>
+          </div>
+          <div class="skills-layout">
+            <div class="chart-box">
+              <h3>Mapa de competencias</h3>
+              <p>Escala de autovaloración de 1 a 5: nivel actual y nivel meta.</p>
+              <svg viewBox="0 0 300 290" width="100%" aria-label="Gráfico radar de competencias">
+                <g fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1">
+                  <polygon points="150,128 165.6,134.4 172,150 165.6,165.6 150,172 134.4,165.6 128,150 134.4,134.4"/>
+                  <polygon points="150,106 181.1,118.9 194,150 181.1,181.1 150,194 118.9,181.1 106,150 118.9,118.9"/>
+                  <polygon points="150,84 196.7,103.3 216,150 196.7,196.7 150,216 103.3,196.7 84,150 103.3,103.3"/>
+                  <polygon points="150,62 212.2,87.8 238,150 212.2,212.2 150,238 87.8,212.2 62,150 87.8,87.8"/>
+                  <polygon points="150,40 227.8,72.2 260,150 227.8,227.8 150,260 72.2,227.8 40,150 72.2,72.2"/>
+                  <line x1="150" y1="150" x2="150" y2="40"/><line x1="150" y1="150" x2="227.8" y2="72.2"/><line x1="150" y1="150" x2="260" y2="150"/><line x1="150" y1="150" x2="227.8" y2="227.8"/><line x1="150" y1="150" x2="150" y2="260"/><line x1="150" y1="150" x2="72.2" y2="227.8"/><line x1="150" y1="150" x2="40" y2="150"/><line x1="150" y1="150" x2="72.2" y2="72.2"/>
+                </g>
+                <polygon points="150,40 227.8,72.2 238,150 212.2,212.2 150,238 87.8,212.2 62,150 72.2,72.2" fill="rgba(168,85,247,.13)" stroke="#a855f7" stroke-width="2" stroke-dasharray="5 4"/>
+                <polygon points="150,62 212.2,87.8 216,150 196.7,196.7 150,194 103.3,196.7 106,150 103.3,103.3" fill="rgba(32,212,255,.18)" stroke="#20d4ff" stroke-width="2.5"/>
+                <g fill="#cad8ea" font-size="9" font-family="Arial">
+                  <text x="122" y="26">Electrónica</text><text x="226" y="64">DACI/VESDA</text><text x="261" y="153">Programación</text><text x="219" y="244">Base de datos</text><text x="121" y="278">BI / Datos</text><text x="30" y="242">Comunicación</text><text x="4" y="153">Inglés</text><text x="53" y="64">Emprendimiento</text>
+                </g>
+              </svg>
+              <div class="legend"><span><i style="background:var(--cyan)"></i>Nivel actual</span><span><i style="background:var(--purple)"></i>Meta</span></div>
+            </div>
+            <div class="chart-box">
+              <h3>Brecha de desarrollo prioritaria</h3>
+              <p>Comparación resumida para planificar mi capacitación.</p>
+              <div class="bars">
+                <div><div class="bar-label"><span>Electrónica industrial</span><span>4 → 5</span></div><div class="bar-stack"><div class="bar-current" style="width:80%"></div><div class="bar-target" style="width:100%"></div></div></div>
+                <div><div class="bar-label"><span>DACI / VESDA</span><span>4 → 5</span></div><div class="bar-stack"><div class="bar-current" style="width:80%"></div><div class="bar-target" style="width:100%"></div></div></div>
+                <div><div class="bar-label"><span>Programación</span><span>3 → 4</span></div><div class="bar-stack"><div class="bar-current" style="width:60%"></div><div class="bar-target" style="width:80%"></div></div></div>
+                <div><div class="bar-label"><span>Bases de datos</span><span>3 → 4</span></div><div class="bar-stack"><div class="bar-current" style="width:60%"></div><div class="bar-target" style="width:80%"></div></div></div>
+                <div><div class="bar-label"><span>Análisis de datos / BI</span><span>2 → 4</span></div><div class="bar-stack"><div class="bar-current" style="width:40%"></div><div class="bar-target" style="width:80%"></div></div></div>
+                <div><div class="bar-label"><span>Inglés técnico</span><span>2 → 4</span></div><div class="bar-stack"><div class="bar-current" style="width:40%"></div><div class="bar-target" style="width:80%"></div></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-3">
+          <div class="panel-heading">
+            <div class="panel-number">03</div>
+            <div><h2>Objetivos SMART</h2><p>Metas específicas, medibles, alcanzables, relevantes y definidas en el tiempo para orientar mi progreso.</p></div>
+          </div>
+          <div class="goal-groups">
+            <section class="goal-group">
+              <div class="goal-group-header"><h3>Corto plazo</h3><span class="period">30 días a 4 meses · 4 objetivos</span></div>
+              <div class="goal-grid">
+                <div class="goal"><div class="goal-title"><span class="goal-id">01</span><h4>Fortalecer mi portafolio técnico-digital</h4></div><p>Documentar proyectos académicos y evidencias técnicas no confidenciales en 3 meses.</p><div class="measure">Indicador: 5 evidencias y 6 actualizaciones.</div></div>
+                <div class="goal"><div class="goal-title"><span class="goal-id">02</span><h4>Mejorar mi comunicación profesional</h4></div><p>Practicar informes y exposiciones técnicas semanales durante 8 semanas.</p><div class="measure">Indicador: 8 guiones o presentaciones.</div></div>
+                <div class="goal"><div class="goal-title"><span class="goal-id">03</span><h4>Actualizar mi perfil en LinkedIn</h4></div><p>Mejorar descripción, experiencia, habilidades y evidencias en 30 días.</p><div class="measure">Indicador: perfil y 5 evidencias visibles.</div></div>
+                <div class="goal"><div class="goal-title"><span class="goal-id">04</span><h4>Reforzar mi inglés técnico</h4></div><p>Estudiar vocabulario y lectura técnica durante 4 meses.</p><div class="measure">Indicador: glosario de 120 términos.</div></div>
+              </div>
+            </section>
+            <section class="goal-group">
+              <div class="goal-group-header"><h3>Mediano plazo</h3><span class="period">5 a 6 meses · 4 objetivos</span></div>
+              <div class="goal-grid">
+                <div class="goal"><div class="goal-title"><span class="goal-id">05</span><h4>Capacitarme en análisis de datos y TI</h4></div><p>Completar cursos de Power BI y SQL en 6 meses.</p><div class="measure">Indicador: 2 certificados.</div></div>
+                <div class="goal"><div class="goal-title"><span class="goal-id">06</span><h4>Desarrollar un sistema web de mantenimiento</h4></div><p>Construir un prototipo para equipos, mantenimientos y reportes.</p><div class="measure">Indicador: prototipo con 3 módulos.</div></div>
+                <div class="goal"><div class="goal-title"><span class="goal-id">07</span><h4>Ampliar mi red profesional</h4></div><p>Relacionarme con profesionales de TI y seguridad electrónica en 5 meses.</p><div class="measure">Indicador: 20 contactos y bitácora.</div></div>
+                <div class="goal"><div class="goal-title"><span class="goal-id">08</span><h4>Fortalecer mi empleabilidad</h4></div><p>Postular a posiciones alineadas con tecnología y supervisión.</p><div class="measure">Indicador: 10 postulaciones en 6 meses.</div></div>
+              </div>
+            </section>
+            <section class="goal-group">
+              <div class="goal-group-header"><h3>Largo plazo</h3><span class="period">12 a 18 meses · 2 objetivos</span></div>
+              <div class="goal-grid">
+                <div class="goal"><div class="goal-title"><span class="goal-id">09</span><h4>Diseñar el modelo de mi futura empresa de coberturas de Aluzinc</h4></div><p>Definir productos para techos de casas, clientes, proveedores, costos, maquinaria, procesos, propuesta de valor y estructura inicial de la empresa en 12 meses.</p><div class="measure">Indicador: modelo de negocio industrial documentado.</div></div>
+                <div class="goal"><div class="goal-title"><span class="goal-id">10</span><h4>Consolidar mi ruta hacia una empresa automatizada</h4></div><p>Integrar experiencia técnica, formación en TI, automatización electrónica, análisis de datos y gestión de procesos para construir la base de mi futura empresa de fabricación en 18 meses.</p><div class="measure">Indicador: 6 revisiones, 1 proyecto integrador y plan industrial actualizado.</div></div>
+              </div>
+            </section>
+          </div>
+          <div class="cards two" style="margin-top:18px;">
+            <div class="chart-box">
+              <h3>Distribución por horizonte</h3>
+              <p>Cantidad de objetivos formulados por plazo.</p>
+              <div class="objective-chart">
+                <div class="horizontal"><span>Corto plazo</span><div class="track"><div class="fill" style="width:100%"></div></div><b>4</b></div>
+                <div class="horizontal"><span>Mediano</span><div class="track"><div class="fill" style="width:100%"></div></div><b>4</b></div>
+                <div class="horizontal"><span>Largo plazo</span><div class="track"><div class="fill" style="width:50%"></div></div><b>2</b></div>
+              </div>
+            </div>
+            <div class="box">
+              <h3>Enfoque estratégico de los objetivos</h3>
+              <p>Las metas se concentran en cuatro ejes complementarios:</p>
+              <div class="chip-wrap"><span class="chip">Formación TI</span><span class="chip">Automatización</span><span class="chip">Gestión industrial</span><span class="chip">Emprendimiento</span></div>
+              <p style="margin-top:12px;">El seguimiento de los indicadores permitirá verificar avances y ajustar decisiones antes de ampliar el alcance del proyecto profesional.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-4">
+          <div class="panel-heading">
+            <div class="panel-number">04</div>
+            <div><h2>Redes de contacto y estrategias de networking</h2><p>Relaciones actuales y acciones orientadas a generar aprendizaje, visibilidad y oportunidades profesionales.</p></div>
+          </div>
+          <div class="cards two">
+            <div class="network-diagram">
+              <svg viewBox="0 0 520 340" aria-label="Mapa de redes de contacto">
+                <g stroke="rgba(32,212,255,.42)" stroke-width="2">
+                  <line x1="260" y1="170" x2="130" y2="70"/><line x1="260" y1="170" x2="390" y2="70"/><line x1="260" y1="170" x2="110" y2="260"/><line x1="260" y1="170" x2="410" y2="260"/>
+                </g>
+                <g fill="#122c40" stroke="rgba(255,255,255,.16)" stroke-width="1.5">
+                  <rect x="54" y="42" width="152" height="55" rx="17"/><rect x="314" y="42" width="152" height="55" rx="17"/><rect x="38" y="237" width="168" height="55" rx="17"/><rect x="314" y="237" width="168" height="55" rx="17"/>
+                </g>
+                <rect x="191" y="125" width="138" height="92" rx="24" fill="url(#networkGradient)"/>
+                <defs><linearGradient id="networkGradient"><stop stop-color="#20d4ff"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                <g fill="#f5f9ff" font-family="Arial" text-anchor="middle">
+                  <text x="130" y="67" font-size="13" font-weight="700">LinkedIn</text><text x="130" y="84" font-size="10" fill="#a8bad0">Visibilidad profesional</text>
+                  <text x="390" y="67" font-size="13" font-weight="700">GitHub</text><text x="390" y="84" font-size="10" fill="#a8bad0">Proyectos digitales</text>
+                  <text x="122" y="262" font-size="13" font-weight="700">WhatsApp</text><text x="122" y="279" font-size="10" fill="#a8bad0">Coordinación</text>
+                  <text x="398" y="262" font-size="13" font-weight="700">Universidad</text><text x="398" y="279" font-size="10" fill="#a8bad0">Docentes y compañeros</text>
+                  <text x="260" y="162" font-size="15" font-weight="700">Edwin</text><text x="260" y="181" font-size="11">Red profesional</text>
+                </g>
+              </svg>
+            </div>
+            <div class="box">
+              <span class="tag">Redes actuales</span>
+              <h3>Contactos que fortalecen mi trayectoria</h3>
+              <ul>
+                <li><strong>LinkedIn:</strong> conexión con profesionales y empresas, mostrando avances, habilidades y certificaciones.</li>
+                <li><strong>GitHub:</strong> evidencia de proyectos de software, documentación y evolución digital.</li>
+                <li><strong>WhatsApp profesional:</strong> coordinación con contactos académicos y laborales.</li>
+                <li><strong>Compañeros y docentes:</strong> aprendizaje, intercambio de experiencias y oportunidades.</li>
+              </ul>
+            </div>
+          </div>
+          <h3 class="subheading">Estrategias para ampliar mi red</h3>
+          <div class="strategy-grid">
+            <div class="box strategy"><h3>LinkedIn activo</h3><p>Actualizar mi perfil y publicar avances, proyectos o certificaciones vinculadas a TI y seguridad electrónica.</p><strong>Meta: 12 publicaciones y 20 contactos · 3 meses</strong></div>
+            <div class="box strategy"><h3>Portafolio en GitHub</h3><p>Publicar proyectos académicos o prototipos de software con documentación clara y evidencia de resultados.</p><strong>Meta: 2 repositorios documentados · 6 meses</strong></div>
+            <div class="box strategy"><h3>Eventos y capacitaciones</h3><p>Asistir a webinars o charlas sobre TI, BI, automatización y seguridad electrónica.</p><strong>Meta: 3 eventos registrados · 6 meses</strong></div>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-5">
+          <div class="panel-heading">
+            <div class="panel-number">05</div>
+            <div><h2>Exploración del autoempleo y crecimiento profesional</h2><p>Elección de una ruta progresiva que combina experiencia laboral actual con la preparación responsable de una planta industrial automatizada.</p></div>
+          </div>
+          <div class="highlight"><strong>Elección profesional:</strong> mi meta final es crear una empresa dedicada a la fabricación de coberturas de Aluzinc para techos de casas, con automatización electrónica y sistemas TI para ventas y fabricación. Para lograrlo, seguiré creciendo profesionalmente mientras desarrollo de forma progresiva el modelo de negocio, los procesos productivos, el sistema de gestión, la red de proveedores y la estrategia comercial. Esta ruta me permitirá emprender con mayor respaldo técnico, financiero y organizacional.</div>
+          <div class="route">
+            <div class="phase"><b>Etapa 1 · Preparación</b><p>Fortalecer formación en TI, automatización, costos, gestión de producción y procesos industriales.</p></div>
+            <div class="phase"><b>Etapa 2 · Diseño</b><p>Diseñar el modelo de planta, flujo de producción, sistema de inventario, mantenimiento y ventas.</p></div>
+            <div class="phase"><b>Etapa 3 · Empresa propia</b><p>Implementar una empresa de coberturas de Aluzinc con ventas, fabricación e inventario controlados mediante sistemas TI.</p></div>
+          </div>
+          <div class="cards two">
+            <div class="box">
+              <span class="tag">Sector de desarrollo</span>
+              <h3>Coberturas de Aluzinc para techos</h3>
+              <p>Fabricación y comercialización de coberturas metálicas de Aluzinc para techos de casas, integrando automatización electrónica, sistemas TI, control de producción, inventario y ventas.</p>
+              <h3 style="margin-top:15px;">Valor diferencial</h3>
+              <p>Mi enfoque como ingeniero de sistemas permitirá que la planta no solo produzca, sino que opere con información en tiempo real para reducir errores, controlar costos y tomar mejores decisiones.</p>
+            </div>
+            <div class="chart-box">
+              <h3>Matriz personal de decisión</h3>
+              <p>Comparación reflexiva en escala del 1 al 5.</p>
+              <table class="decision-table">
+                <thead><tr><th>Criterio</th><th>Ruta propia</th><th>Dependiente</th></tr></thead>
+                <tbody>
+                  <tr><td>Autonomía</td><td><span class="score-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td><span class="score-dots purple"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td></tr>
+                  <tr><td>Estabilidad inicial</td><td><span class="score-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td><td><span class="score-dots purple"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td></tr>
+                  <tr><td>Escalabilidad</td><td><span class="score-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></td><td><span class="score-dots purple"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td></tr>
+                  <tr><td>Aprendizaje</td><td><span class="score-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td><td><span class="score-dots purple"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h3 class="subheading">Idea de empresa y acción inicial</h3>
+          <div class="cards three">
+            <div class="box"><h3>Producto principal</h3><p>Coberturas de Aluzinc para techos de casas, con medidas personalizadas, control de calidad y tiempos de entrega controlados.</p></div>
+            <div class="box"><h3>Automatización electrónica</h3><p>Procesos de fabricación automatizados mediante equipos, sensores, control de producción y mantenimiento preventivo para mejorar tiempos y reducir desperdicios.</p></div>
+            <div class="box"><h3>Sistemas TI</h3><p>Sistemas para ventas, cotizaciones, órdenes de fabricación, inventario, clientes, costos, reportes e indicadores para tomar decisiones basadas en datos.</p></div>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-6">
+          <div class="panel-heading">
+            <div class="panel-number">06</div>
+            <div><h2>Conclusiones y plan de acción</h2><p>Reflexión final y compromisos medibles para convertir mi visión profesional en resultados.</p></div>
+          </div>
+          <div class="box">
+            <span class="tag">Reflexión final</span>
+            <p>Mi desarrollo profesional parte de una base técnica y se fortalece con mi formación en Ingeniería de Sistemas e Informática. Mi visión es combinar la manufactura metálica con soluciones digitales para crear una empresa dedicada a la fabricación de coberturas de Aluzinc para techos de casas. Para lograrlo, debo fortalecer software, automatización electrónica, análisis de datos, gestión de producción, ventas digitales, control de inventario, comunicación profesional, gestión comercial y planificación empresarial. Este plan convierte mi meta en una ruta medible, realista y orientada a una empresa moderna, eficiente y escalable.</p>
+          </div>
+          <h3 class="subheading">Compromisos concretos</h3>
+          <div class="cards two">
+            <div class="commitment"><h3>Compromiso 1 · Formación en datos</h3><p>Durante los próximos 6 meses completaré dos cursos certificados en Power BI y SQL e incorporaré los certificados y un ejercicio aplicado a mi portafolio digital.</p><span class="evidence">Evidencia: 2 certificados y 1 ejercicio práctico publicado.</span></div>
+            <div class="commitment"><h3>Compromiso 2 · Prototipo web</h3><p>Durante los próximos 6 meses desarrollaré un prototipo web para gestionar equipos y mantenimientos de sistemas de seguridad electrónica, documentándolo en GitHub.</p><span class="evidence">Evidencia: prototipo funcional, repositorio y capturas.</span></div>
+          </div>
+          <h3 class="subheading">Plan de acción</h3>
+          <div class="box" style="padding:0; overflow-x:auto;">
+            <table class="action-table">
+              <thead><tr><th>Acción</th><th>Indicador</th><th>Plazo</th><th>Resultado esperado</th></tr></thead>
+              <tbody>
+                <tr><td>Fortalecer portafolio técnico-digital</td><td>5 evidencias y 6 actualizaciones</td><td>3 meses</td><td>Presentación profesional sólida.</td></tr>
+                <tr><td>Completar formación Power BI y SQL</td><td>2 certificados</td><td>6 meses</td><td>Base para análisis de datos aplicado.</td></tr>
+                <tr><td>Desarrollar prototipo web</td><td>3 módulos y repositorio documentado</td><td>6 meses</td><td>Solución tecnológica demostrable.</td></tr>
+                <tr><td>Diseñar modelo de empresa de coberturas de Aluzinc</td><td>Documento inicial de productos, procesos, maquinaria, costos, ventas y clientes objetivo</td><td>12 meses</td><td>Base formal para iniciar una empresa automatizada.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="subheading">Hoja de ruta profesional</h3>
+          <div class="roadmap">
+            <div class="milestone"><b>0–3 meses</b><span>Portafolio, LinkedIn y práctica de comunicación.</span></div>
+            <div class="milestone"><b>4–6 meses</b><span>Certificaciones, networking y prototipo web.</span></div>
+            <div class="milestone"><b>7–12 meses</b><span>Modelo de empresa, productos, procesos, costos, ventas y clientes objetivo.</span></div>
+            <div class="milestone"><b>13–18 meses</b><span>Proyecto integrador y base operativa para una empresa automatizada.</span></div>
+          </div>
+          <div class="quote">“Mi objetivo es fabricar coberturas de Aluzinc para techos de casas, integrando automatización electrónica y sistemas TI para vender, producir y gestionar con datos.”</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Portafolio Digital · Plan de Desarrollo de Carrera</strong>
+    <span>Elaborado por Edwin Guevara · 2026</span>
+    <span class="note">Los gráficos de competencias y decisión profesional corresponden a una autovaloración personal orientada al seguimiento de mi desarrollo.</span>
+  </footer>
+  <!-- Funciones interactivas del portafolio -->
+  <script src="js/app.js"></script>
+</body>
+</html>

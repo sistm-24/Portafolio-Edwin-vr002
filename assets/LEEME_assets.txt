@@ -1,0 +1,22 @@
+CARPETA ASSETS - PORTAFOLIO EDWIN VR2
+
+Coloca aquí tus archivos personales:
+
+1. Foto de perfil:
+   foto-perfil.jpg
+
+2. Fondos opcionales:
+   fondo-portafolio.jpg
+   fondo-industrial.jpg
+
+3. CV:
+   CV_Edwin_Guevara.pdf
+
+4. Certificados:
+   certificado_powerbi.pdf
+   certificado_sql.pdf
+
+IMPORTANTE:
+Si cambias el nombre de un archivo, también cambia la ruta en:
+- index.html
+- css/styles.css
